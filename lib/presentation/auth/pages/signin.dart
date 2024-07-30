@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:spotify_app2/common/appbar/app_bar.dart';
 import 'package:spotify_app2/common/widget/button/basic_app_button.dart';
 import 'package:spotify_app2/core/configs/assets/app_vectors.dart';
-import 'package:spotify_app2/presentation/auth/pages/sign_up.dart';
+import 'package:spotify_app2/presentation/auth/pages/signup.dart';
 
 class SigninPage extends StatelessWidget {
   SigninPage({super.key});

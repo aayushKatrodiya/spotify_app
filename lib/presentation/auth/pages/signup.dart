@@ -3,8 +3,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:spotify_app2/common/appbar/app_bar.dart';
 import 'package:spotify_app2/common/widget/button/basic_app_button.dart';
 import 'package:spotify_app2/core/configs/assets/app_vectors.dart';
-import 'package:spotify_app2/presentation/auth/pages/sign_in.dart';
+import 'package:spotify_app2/data/models/auth/create_user_req.dart';
+import 'package:spotify_app2/domain/usecases/auth/signup.dart';
+import 'package:spotify_app2/presentation/auth/pages/signin.dart';
 import 'package:spotify_app2/presentation/home/pages/home.dart';
+
+import '../../../service_locater.dart';
 
 class SignupPage extends StatelessWidget {
   SignupPage({super.key});
@@ -47,25 +51,25 @@ class SignupPage extends StatelessWidget {
             ),
             BasicAppButton(
                 onPressed: () async {
-                  // var result = await sl<SignupUseCase>().call(
-                  //     params: CreateUserReq(
-                  //         fullName: _fullName.text.toString(),
-                  //         email: _email.text.toString(),
-                  //         password: _password.text.toString()));
-                  // result.fold((l) {
-                  //   var snackbar = SnackBar(
-                  //     content: Text(l),
-                  //     behavior: SnackBarBehavior.floating,
-                  //   );
-                  //   ScaffoldMessenger.of(context).showSnackBar(snackbar);
-                  // }, (r) {
-                  // Navigator.pushAndRemoveUntil(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //       builder: (BuildContext context) => const HomePage(),
-                  //     ),
-                  //     (route) => false);
-                  // });
+                  var result = await sl<SignupUsecase>().call(
+                      params: CreateUserReq(
+                          fullName: _fullName.text.toString(),
+                          email: _email.text.toString(),
+                          password: _password.text.toString()));
+                  result.fold((l) {
+                    var snackbar = SnackBar(
+                      content: Text(l),
+                      behavior: SnackBarBehavior.floating,
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                  }, (r) {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => const HomePage(),
+                        ),
+                        (route) => false);
+                  });
                   Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
