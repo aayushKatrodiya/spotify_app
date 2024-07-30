@@ -7,6 +7,8 @@ import 'package:spotify_app2/firebase_options.dart';
 import 'package:spotify_app2/presentation/choose_mode/block/theme_cubit.dart';
 import 'package:spotify_app2/presentation/splash/pages/splash.dart';
 
+import 'service_locater.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -19,6 +21,9 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  await initiolizeDependencies();
+
   runApp(const MyApp());
 }
 
