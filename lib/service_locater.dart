@@ -14,6 +14,7 @@ Future<void> initiolizeDependencies() async {
   sl.registerSingleton<AuthRepository>(
     AuthRepositoryImpl(),
   );
+
   sl.registerSingleton<SignupUsecase>(
     SignupUsecase(),
   );

@@ -61,7 +61,12 @@ class SignupPage extends StatelessWidget {
                       content: Text(l),
                       behavior: SnackBarBehavior.floating,
                     );
-                    ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      snackbar,
+                      snackBarAnimationStyle: AnimationStyle(
+                        duration: const Duration(seconds: 10),
+                      ),
+                    );
                   }, (r) {
                     Navigator.pushAndRemoveUntil(
                         context,
@@ -71,6 +76,7 @@ class SignupPage extends StatelessWidget {
                         (route) => false);
                   });
                   Navigator.pushAndRemoveUntil(
+                      // ignore: use_build_context_synchronously
                       context,
                       MaterialPageRoute(
                         builder: (BuildContext context) => const HomePage(),

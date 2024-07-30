@@ -22,45 +22,48 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        // appBar: BasicAppbar(
-        //   hideBack: true,
-        //   action: IconButton(
-        //       onPressed: () {
-        //         Navigator.push(
-        //             context,
-        //             MaterialPageRoute(
-        //                 builder: (BuildContext context) => const ProfilePage()));
-        //       },
-        //       icon: const Icon(Icons.person)),
-        //   title: SvgPicture.asset(
-        //     AppVectors.logo,
-        //     height: 40,
-        //     width: 40,
-        //   ),
-        // ),
-        // body: SingleChildScrollView(
-        //   child: Column(
-        //     mainAxisAlignment: MainAxisAlignment.center,
-        //     children: [
-        //       _homeTopCard(),
-        //       _tabs(),
-        //       SizedBox(
-        //         height: 260,
-        //         child: TabBarView(
-        //           controller: _tabController,
-        //           children: [
-        //             const NewsSongs(),
-        //             Container(),
-        //             Container(),
-        //             Container()
-        //           ],
-        //         ),
-        //       ),
-        //       const PlayList()
-        //     ],
-        //   ),
-        // ),
-        );
+      body: Center(
+        child: Text("Hiii You did it"),
+      ),
+      // appBar: BasicAppbar(
+      //   hideBack: true,
+      //   action: IconButton(
+      //       onPressed: () {
+      //         Navigator.push(
+      //             context,
+      //             MaterialPageRoute(
+      //                 builder: (BuildContext context) => const ProfilePage()));
+      //       },
+      //       icon: const Icon(Icons.person)),
+      //   title: SvgPicture.asset(
+      //     AppVectors.logo,
+      //     height: 40,
+      //     width: 40,
+      //   ),
+      // ),
+      // body: SingleChildScrollView(
+      //   child: Column(
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     children: [
+      //       _homeTopCard(),
+      //       _tabs(),
+      //       SizedBox(
+      //         height: 260,
+      //         child: TabBarView(
+      //           controller: _tabController,
+      //           children: [
+      //             const NewsSongs(),
+      //             Container(),
+      //             Container(),
+      //             Container()
+      //           ],
+      //         ),
+      //       ),
+      //       const PlayList()
+      //     ],
+      //   ),
+      // ),
+    );
   }
 
   // Widget _homeTopCard() {
