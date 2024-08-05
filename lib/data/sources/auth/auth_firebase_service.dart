@@ -21,9 +21,9 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
       String message = '';
 
       if (e.code == "invalid-email") {
-        message = 'The password provided is too weak';
+        message = "Not user found for that email";
       } else if (e.code == 'invalid-credential') {
-        message = 'Anaccount already exists with that email.';
+        message = "Wrong password provided for that user";
       }
 
       return Left(message);
